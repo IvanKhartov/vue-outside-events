@@ -1,9 +1,11 @@
 import type { Plugin } from 'vue'
 import {
+  blur,
   change,
   click,
   customEventOutside,
   dblclick,
+  focus,
   focusin,
   focusout,
   keydown,
@@ -20,9 +22,11 @@ import {
 
 const plugin: Plugin = {
   install(app) {
+    app.directive(blur.directiveName, blur)
     app.directive(change.directiveName, change)
     app.directive(click.directiveName, click)
     app.directive(dblclick.directiveName, dblclick)
+    app.directive(focus.directiveName, focus)
     app.directive(focusin.directiveName, focusin)
     app.directive(focusout.directiveName, focusout)
     app.directive(keydown.directiveName, keydown)

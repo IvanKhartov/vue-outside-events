@@ -1,9 +1,11 @@
 import type { ObjectDirective } from 'vue'
 
 type EventsType =
+  | 'blur'
   | 'change'
   | 'click'
   | 'dblclick'
+  | 'focus'
   | 'focusin'
   | 'focusout'
   | 'keydown'
@@ -24,9 +26,11 @@ type BindingValue = {
   handler: HandlerFn
 }
 interface OutsideElement extends HTMLElement {
+  __vueEventOutside__blur?: HandlerFn
   __vueEventOutside__change?: HandlerFn
   __vueEventOutside__click?: HandlerFn
   __vueEventOutside__dblclick?: HandlerFn
+  __vueEventOutside__focus?: HandlerFn
   __vueEventOutside__focusin?: HandlerFn
   __vueEventOutside__focusout?: HandlerFn
   __vueEventOutside__keydown?: HandlerFn
@@ -139,9 +143,11 @@ export const customEventOutside: CustomDirective<HTMLElement, BindingValue> = {
   }
 }
 
+export const blur = createOutsideEvent('blur')
 export const change = createOutsideEvent('change')
 export const click = createOutsideEvent('click')
 export const dblclick = createOutsideEvent('dblclick')
+export const focus = createOutsideEvent('focus')
 export const focusin = createOutsideEvent('focusin')
 export const focusout = createOutsideEvent('focusout')
 export const keydown = createOutsideEvent('keydown')
