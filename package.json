@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nchutchind/vue-outside-events.git"
+    "url": "git+https://github.com/upstars-global/vue3-outside-events"
   },
   "author": "Nicholas Hutchind <nicholas@hutchind.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nchutchind/vue-outside-events/issues"
+    "url": "https://github.com/upstars-global/vue3-outside-events/pulls"
   },
-  "homepage": "https://github.com/nchutchind/vue-outside-events#readme",
+  "homepage": "https://github.com/upstars-global/vue3-outside-events#readme",
   "devDependencies": {
     "@babel/core": "^7.23.6",
     "@babel/preset-env": "^7.23.6",
