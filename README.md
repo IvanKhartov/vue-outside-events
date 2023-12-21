@@ -6,11 +6,8 @@ Works well for handling clicks outside of menus and popups. Can handle any DOM e
 
 ## Install
 ```js
-npm install --save vue-outside-events
+npm install --save vue3-outside-events
 ```
-
-## Demos
-Check out the highly contrived demos here: [https://nchutchind.github.io/vue-outside-events/docs/index.html](https://nchutchind.github.io/vue-outside-events/docs/index.html)
 
 ## Use
 
