@@ -1,6 +1,4 @@
-declare module 'vue3-outside-events' {
-  import { Plugin } from 'vue'
+import { Plugin } from '@vue/runtime-core'
 
-  const plugin: Plugin
-  export default plugin
-}
+declare const plugin: Plugin
+export default plugin
