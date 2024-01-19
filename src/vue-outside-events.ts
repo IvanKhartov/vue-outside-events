@@ -52,7 +52,7 @@ interface CustomDirective<T, V> extends ObjectDirective<T, V> {
 const createOutsideEvent = (eventName: EventsType): CustomDirective<OutsideElement, HandlerFn | BindingValue> => ({
   directiveName: `${eventName}-outside`,
   eventName,
-  mounted: (el, binding) => {
+  beforeMount: (el, binding) => {
     const err = console.error !== undefined ? console.error : console.log
     let fn: HandlerFn = null
     let options: Options = undefined
@@ -98,7 +98,7 @@ const createOutsideEvent = (eventName: EventsType): CustomDirective<OutsideEleme
 
 export const customEventOutside: CustomDirective<HTMLElement, BindingValue> = {
   directiveName: 'event-outside',
-  mounted: (el, binding) => {
+  beforeMount: (el, binding) => {
     const err = console.error !== undefined ? console.error : console.log
     let options: Options = undefined
     if (
